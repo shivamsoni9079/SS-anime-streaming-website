@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="../CSS files/global.css">
+    <link rel="stylesheet" href="../CSS files/home.css">
+</head>
+<body>
+    <div id="navbar-container">
+
+    </div>
+      <!-- slider -->
+       
+      <section class="anime-slider">
+         <div class="anime-wrapper" id="animeWrapper">
+
+         </div>
+         <div class="anime-slider-buttons">
+             <button id="slider-prev">
+                  ❮
+             </button>
+             <button id="slider-next">
+                 ❯
+             </button>
+              
+         </div>
+           <div class="anime-slider-dots" id="sliderDots"></div>
+      
+      </section>
+
+    <!-- trending anime -->
+     <section id="trending-anime-section">
+             <div class="section-heading-box">
+                            <h2 class="section-heading">Trending</h2>
+                            <a href="anime-list.html?type=trending" class="section-more">View More <span>&gt;</span></a>
+                        </div>
+             <div id="swiper-wrapper">
+
+                <div class="" id="trendyAnime">
+
+                </div>
+
+              <div class="trending-buttons">
+                    <button id="prev-trendy-btn">
+                          ❮
+                    </button>
+
+                    <button id="next-trendy-btn">
+                           ❯
+                    </button>
+
+              </div> 
+
+             </div>
+            </section>
+ 
+            <!-- begin anime featured -->
+            <div id="anime-feature">
+                 <div class="anime-feature-list">
+                    <h2 class="anime-feature-heading">Top Airing</h2>
+                    <div class="anime-feature-ul-container">
+                        <ul class="anime-feature-item-ul" id="topAiringAnime">
+               
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="anime-list.html?type=topAiring">View More <span>&gt;</span></a>
+                    </div>
+                 </div>
+                 <div class="anime-feature-list">
+                    <h2 class="anime-feature-heading">Most Popular</h2>
+                    <div class="anime-feature-ul-container">
+                        <ul class="anime-feature-item-ul" id="popularAnime">
+                          
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="anime-list.html?type=mostPopular">View More <span>&gt;</span></a>
+                    </div>
+                 </div>
+
+                 <div class="anime-feature-list">
+                    <h2 class="anime-feature-heading">Most Favorite</h2>
+                    <div class="anime-feature-ul-container">
+                        <ul class="anime-feature-item-ul" id="favoriteAnime">
+                         
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="anime-list.html?type=mostFavorite">View More <span>&gt;</span></a>
+                    </div>
+                 </div>
+
+                 <div class="anime-feature-list">
+                    <h2 class="anime-feature-heading">Latest Completed</h2>
+                    <div class="anime-feature-ul-container">
+                        <ul class="anime-feature-item-ul" id="completedAnime">
+                          
+                        </ul>
+                    </div>
+                    <div class="more">
+                        <a href="anime-list.html?type=latestCompleted" class="view-more-link">View More <span>&gt;</span></a>
+                    </div>
+                 </div>
+
+
+            </div>
+            <!-- main wrapper -->
+             <div class="main-wrapper">
+
+            <!-- main content -->
+
+                 <div class="main-content">
+                    <!-- latest episodes section -->
+                    <section class="anime-section">
+                        <div class="section-heading-box">
+                            <h2 class="section-heading">Latest Episodes</h2>
+                            <a href="anime-list.html?type=latest" class="section-more">View More <span>&gt;</span></a>
+                        </div>
+                         
+
+                         <div class="anime-grid" id="latestAnime">
+
+                            <p class="loading">
+                                 Loading...
+                            </p>
+
+                           
+                         </div>
+                         
+                         <div id="latest-anime-page"></div>
+                        </section>
+
+
+                    <!-- Top anime section -->
+                    <section class="anime-section">
+                          <div class="section-heading-box">
+                            <h2 class="section-heading">Top Anime</h2>
+                            <a href="anime-list.html?type=top" class="section-more">View More <span>&gt;</span></a>
+                          </div>
+
+                         <div class="anime-grid" id="topAnime">
+
+                            <p class="loading">
+                                 Loading...
+                            </p>
+
+                           
+                         </div>
+                         
+                         <div id="top-anime-page"></div>
+                    </section>
+                        
+
+                         
+                 </div>
+
+                 <!-- side bar -->
+               <div class="side-bar">
+                    <section class="genres-section">
+                        <h2 class="section-heading">Genres</h2>
+                        <div class="genres">
+                    <div class="genres-container" id="genresContainer"></div>
+                        <div class="genre-btn-box">
+                                  <button class="show-more-genre-btn" id="showMoreBtn">
+                                    Show More +
+                                  </button>
+                        </div>
+                        </div>
+                      
+                    </section>
+                    <section class="anime-section">
+                        <h2 class="section-heading">Most Viewed</h2>
+                        <ul class="most-viewed-anime-ul" id="mostViewedAnime"></ul>
+                    </section>
+
+                 </div>
+                 
+            </div>
+
+    <footer class="footer">
+         <div id="ssanime-logo">
+            <h1>SS!<span>anime</span></h1>
+        </div>
+
+      <p class="copyright-message">&copy SS!anime. All rights reserved.</p>
+    </footer>
+
+    <script src="../Js-files/global.js"></script>
+   <script src="../Js-files/home.js"></script>
+
+   
+</body>
+</html>

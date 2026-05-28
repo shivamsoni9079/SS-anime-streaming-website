@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS files/global.css">
+    <title>navbar</title>
+</head>
+<body>
+     <nav id="nav-bar-container">
+        
+        <div id="search-hilogo-share-toggles-container">
+
+        <div id="burger-img-container">
+            <button id="sidemenu-button" onclick="openMenu()">
+         <img src="../images/burger-bar.png" alt="menu img" id="menu-img">
+            </button>   
+        </div>
+        
+        <div id="ssanime-logo">
+            <h1>SS!<span>anime</span></h1>
+        </div>
+            
+        <!-- <div id="hianime-logo">
+             <img src="../images/hianime-logo4.png" alt="hianime logo" id="hianime-img">
+        </div> -->
+
+
+        <div id="search-anime-container">
+            <input type="text" id="search-anime" placeholder="Search anime...">
+            <button class="search-button"><img src="../images/search.png" alt="search" id="search-input-logo"></button>
+            <!-- <a href="" id="filter">Filter</a> -->
+        </div>
+
+    
+        <div id="share-container">
+            <a href="https://www.facebook.com" target="_blank" id="facebook-share-link">
+                <img src="../images/icons8-facebook-logo-48.png" alt="facebook icon" id="facebook-icon">
+            </a>
+            <a href="https://web.telegram.org" target="_blank" id="telegram-share-link">
+                 <img src="../images/icons8-telegram-48.png" alt="telegram icon" id="telegram-icon">
+            </a>
+
+            <a href="https://www.reddit.com" target="_blank" id="reddit-share-link">
+                  <img src="../images/reddit.png" alt="reddit icon" id="reddit-icon">
+            </a>
+
+            <a href="https://x.com" target="_blank" id="twitter-share-link">
+                <img src="../images/icons8-twitter-circled-48.png" alt="twitter icon" id="twitter-icon">
+            </a>        
+        </div>
+
+        <!-- <div id="toggles-container">
+             <a href="" id=""> 
+                <div class="toggle-item-img-container"><img src="../images/icons8-online-30.png" alt="" id="whatch2gether-img" class="toggle-item-img"></div> 
+                 <span class="toggle-item-name">Whatch2gether</span>
+             </a>
+             <a href="" id="">
+                <div class="toggle-item-img-container"><img src="../images/icons8-random-30.png" alt="" id="random-img" class="toggle-item-img"></div>
+                  <span class="toggle-item-name">Random</span>
+             </a>
+              <a href="" id="">
+                <div class="toggle-item-img-container"><img src="../images/icons8-rss-48.png" alt="" id="rss-img" class="toggle-item-img"></div>
+                  <span class="toggle-item-name">News</span>
+             </a> 
+             <a href="" id="">
+                <div class="toggle-item-img-container"><img src="../images/conversation.png" alt="" id="conversation-img" class="toggle-item-img"></div>
+                   <span class="toggle-item-name">Community</span>
+             </a>
+             
+             
+        </div> -->
+
+        </div>
+ <!-- end of execpt login button div -->
+
+ <div class="mobile-search-box">
+ <input type="text" placeholder="Search anime.." id="mobile-search-input">
+    <button id="mobile-search-button">⌕</button>       
+ </div>
+   
+
+         <div id="login-button-container">
+                 <button class="login-page-button" id="loginPageButton" onclick="openLogin()">Login</button>
+         </div>
+
+
+        
+    </nav>
+ <!-- sidemenu -->
+          <div id="overlay" class="overlay" onclick="closeMenu()">
+            <div id="sideMenu" class="side-Menu" onclick="event.stopPropagation()">
+                <div class="close-btn" onclick="closeMenu()">
+                     &#8592; Close menu
+                </div>
+        <div id="menu-links">
+           <a href="home.html" class="nav-link">home</a>
+          <a href="anime-list.html?type=ongoing" class="nav-link">Ongoing</a>
+          <a href="anime-list.html?type=completed" class="nav-link">Completed</a>
+          <a href="anime-list.html?type=popular" class="nav-link">Most popular</a>
+          <a href="anime-list.html?type=ovas" class="nav-link">OVAs</a>
+          <a href="anime-list.html?type=movies" class="nav-link">Movies</a>
+          <a href="anime-list.html?type=tvSeries" class="nav-link">TV series</a>
+          <a href="anime-list.html?type=oans" class="nav-link">OANs</a>
+          <a href="anime-list.html?type=specials" class="nav-link">Specials</a>
+          <a href="anime-list.html?type=upcoming" class="nav-link">Upcoming</a>
+        </div>
+            </div>    
+          </div>
+        
+
+          <!-- login -->
+        <div class="overlay" id="login-overlay" onclick="closeLogin()">
+
+
+            
+            <div class="login-box" id="loginBox"  onclick="event.stopPropagation()">
+ 
+    
+                <div class="user-info-container">
+                      <p class="user-detail">Username</p>
+                      <input type="email" placeholder="Enter Email" class="login-input" id="login-email">
+                </div>
+                <div class="user-info-container">
+
+                    <p class="user-detail">Password</p>
+                    <div class="password-box">
+                    <input type="password" placeholder="Enter Password" class="login-input" id="login-password"> 
+                    <span class="see-password" onclick="seePassword()">👁</span>
+                </div>
+                </div>
+                                
+                <button id="loginButton" onclick="loginUser()">Login</button>
+                
+                <p id="login-message"></p>
+            </div>
+        </div>
+</body>
+</html>  
+  
+  
+  
+  
+  
+ 

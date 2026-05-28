@@ -1,0 +1,421 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    color:#FFFFFF;
+}
+body{
+    /* color: #CCCCCC; */
+    background-color: rgb(32,31,49);
+    letter-spacing: 1px;
+    /* padding:0 1rem 1rem 1rem; */
+}
+#nav-links-container{
+    display:flex;
+    justify-content: center;
+    gap:3.5rem;
+    margin:5rem 0 0 0;
+}
+.web-name{
+    font-size: 3rem;
+    color:#ffbade;
+}
+.web-name span{
+    font-size:2rem;
+}
+.nav-item{
+    font-size:14px;
+    font-weight: 550;
+    transition: 0.3s;
+}
+ .nav-item:hover{
+    color:#ffbade;
+}
+#menu-button-container{
+    display:none;
+    position: relative;
+}
+
+
+#mobile-menu-box{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:250px;
+    padding:1rem;
+    border-radius:15px;
+    background:#201f31;
+    display:none;
+    flex-direction:column;
+    gap:1rem;
+    z-index:1000;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+#mobile-menu-box a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    padding:0.7rem 1rem;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+#mobile-menu-box a:hover{
+    background:#ff4fa3;
+}
+@media screen and (max-width:1200px){
+    #nav-bar-container{
+        margin:2rem 0 0 0;
+    }
+}
+@media screen and (max-width:780px){
+    #nav-links-container{
+        display:none;
+    }
+    #menu-button-container{
+        display:block;
+        display:flex;
+        align-items: center;
+        gap:0.3rem;
+        margin:2rem 0 0 1.5rem;
+        border:px solid white;
+    }
+    #menu-img{
+        width:17px;
+    }
+    #menu-button-text{
+        color:#FFFFFF;
+        background: none;
+        border:none;
+        font-size:14px;
+        font-weight: 500;
+    }
+}
+#search-anime-img-container{
+    margin:2rem auto;
+    display:flex;
+    border-radius:50px;
+    overflow:hidden;
+    max-width:1400px;
+}
+@media screen and (max-width:1430px){
+   #search-anime-img-container{
+       margin:2rem 1rem;
+   }
+}
+#ssanime-container{
+    border:px solid white;
+    width:52%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    padding:5rem 4.5rem 5rem 4.5rem;
+    gap:2rem;
+    background-color: rgba(255,255,255,.05);
+}
+
+#position-img-container{
+    border:px solid white;
+    width:48%;
+    top:0;
+    right:0;
+    overflow:hidden;
+}
+#position-anime-img{
+    width:100%;
+    height:100%;
+    object-fit: fill;
+}
+#search-anime-container{
+    display:flex;
+    align-items: center;
+    gap:0.7rem;
+    overflow: hidden;
+}
+.search-button{
+    background-color: #ffbade;
+
+    border-radius:14px;
+    color:black;
+    font-size: 3rem;
+    padding:0 0.6rem;
+}
+#search-icon{
+    width:20px;
+}
+
+#ssanime-logo{
+    width:180px;
+}
+#search-anime{
+    font-size:1rem;
+    padding:1rem 1rem;
+    border-radius:15px;
+    width:440px;
+    border:none;
+    outline:none;
+    color:black;
+}
+#anime-link{
+    display: inline-block;
+    background-color: #ffbade;
+    padding:1rem 2rem;
+    color:black;
+    font-size:1.3rem;
+    font-weight: 550;
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    border-radius:10px;
+    margin-top: 1rem;
+}
+#right-arrow-icon{
+    width:20px;
+   
+}
+#top-search-anime{
+    border:px solid white;
+    font-size:14px;
+    width:500px;
+    line-height:25px;
+}
+.top-search-strong{
+    font-weight: 550;
+}
+@media screen and (max-width:1400px){
+    #search-anime-img-container{
+        position:relative;
+        top:0;
+        left:0;
+        z-index:1;
+        margin-right:rem;
+        border:px solid white;
+    }
+    #position-img-container{
+        border:px  solid white;
+        position:absolute;
+        z-index:-50;
+        height:100%; 
+    }
+    #ssanime-container{
+        border:px solid red;
+        width: 800px;
+    }
+} 
+ @media screen and (max-width:780px){
+     #position-img-container{
+        display:none;
+    }
+    #ssanime-container{
+        width:100%;
+        padding:4rem 4.5rem 4rem 4.5rem;
+    }
+    #search-anime{
+    max-width:540px;
+    border:none;
+    }
+    #anime-link{
+       margin-top:0;
+    }
+    #top-search-anime{
+        width:100%;
+        border:px solid white;
+    }
+ }
+ @media screen and (max-width:520px){
+    #ssanime-container{
+        align-items:center;
+        padding:2rem;
+    }
+    #search-anime-img-container{
+        border-radius:0;
+        margin:2rem 0;
+    }
+    #anime-link{
+        width:100%;
+        justify-content: center;
+        font-size:1rem;
+        font-weight: 550;
+    }
+    #top-search-anime{
+        font-size:12px;
+        line-height:20px;
+        border:px solid white;
+    }
+    #search-anime-container{
+        border:px solid white;
+        max-width:100%;
+    }
+ }
+ @media screen and (max-width:356px){
+    #search-anime{
+        width:300px;
+        min-width:30px;
+        border:px solid red;
+    }
+    #search-anime-container{
+        width:100%;
+    }
+ }
+ @media screen and (max-width:294px){
+    #anime-link{
+        flex-direction: column;
+        gap:0.5rem;
+    }
+ }
+ #ssanime-share-container{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    border:px solid white;
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 1rem 0 1rem;
+ }
+ #share-ssanime{
+    color:#ffbade;
+    font-size:0.9rem;
+    font-weight: 550;
+ }
+ #to-your-freinds{
+    font-size:12px;
+    margin-top:0.3rem;
+    color:#CCCCCC;
+ }
+ #share-no{
+    font-size:16px;
+    color:#555555;
+ }
+ #shares{
+    font-size:10px;
+    text-align: center;
+    color:#555555;
+ }
+ #share-details-container{
+    display:flex;
+    gap:0.5rem;
+    align-items: center;
+ }
+
+ #share-icon-container{
+    border:px solid white;
+    padding:0.4rem 1.2rem;
+    border-radius: 16px;
+    background-color:#95D03A;
+ }
+ #share-icon{
+    width:14px;
+ }
+@media screen and (max-width:550px){
+        #ssanime-share-container{
+            flex-direction: column;
+            align-items: start;
+            gap:1rem;
+        }
+}
+#about-post-ssanime-container{
+    display:flex;
+    max-width:1200px;
+    padding:0 1rem 0 1rem;
+    margin:2.5rem auto;
+    border:px solid white;
+    gap:3rem;
+
+}
+#about-ssanime-container{
+    border:px solid white;
+    width:100%;
+    max-width:720px;
+}
+.strong{
+    font-weight: 550;
+    color:#CCCCCC;
+}
+.about-ssanime-des{
+    font-size:14px;
+    margin-bottom:1rem;
+    color:#CCCCCC;
+}
+#about-ssanime-heading1,#trending-post-heading{
+    margin-bottom:1.5rem;
+    font-size: 1.6rem;
+}
+.questions-about-ssanime{
+    margin:2rem 0 1rem 0;
+    font-size:1.4rem;
+}
+ul{
+    padding-left:0.9rem;
+}
+#ssanime-post-container{
+    min-width:400px; 
+    border:px solid white;
+}
+.post-container{
+    background-color: rgba(255,255,255,.05);
+    padding:1rem;
+    border-radius: 15px;   
+}
+#post-para{
+    text-align: center;
+    font-size:14px;
+}
+@media screen and (max-width:990px){
+    #about-post-ssanime-container{
+        flex-direction: column;
+    }
+    #about-ssanime-container{
+        max-width:980px;
+        width:100%;
+        border:px solid red;
+    }
+}
+@media screen and (max-width:432px){
+    #ssanime-post-container{
+        min-width:100px;
+    }
+}
+#footer{
+    max-width:1200px;
+    margin:3rem auto;
+    padding:0 1rem;
+}
+#copyright-message{
+    font-size: 12px;
+    color:#CCCCCC;
+}
+#share-container{
+    display:flex;
+    align-items: center;
+    gap:0rem;
+}
+#telegram-share-link,#twitter-share-link,#facebook-share-link{
+    display: inline-block;
+    height: 40px;
+    border-radius: 100px;
+    overflow: hidden;
+    width:40px;
+}
+#facebook-icon{
+    margin-left:0.2rem;
+}
+#telegram-icon,#facebook-icon,#twitter-icon{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+}
+#reddit-share-link{
+    display: inline-block;
+    background-color:rgb(255, 49, 49);
+    border-radius:500px;
+    padding:0.4rem;
+    width:33px;
+    height:33px;
+}
+#reddit-icon{
+    width:100%;
+}
