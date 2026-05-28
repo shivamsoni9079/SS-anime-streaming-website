@@ -272,8 +272,10 @@ function indexSearchAnime(){
     if(value){
 
         window.location.href =
+        
+`html files/anime-list.html?search=${encodeURIComponent(value)}`;
 
-`anime-list.html?search=${encodeURIComponent(value)}`;
+// `anime-list.html?search=${encodeURIComponent(value)}`;
 
     }
 
