@@ -39,9 +39,9 @@ The website is designed with a modern anime-style UI, responsive layouts, dynami
 
 ```bash
 SS!anime streaming website/
-│
+│── index.html
 ├── html files/
-│   ├── index.html
+│  
 │   ├── home.html
 │   ├── anime-list.html
 │   ├── watch.html
