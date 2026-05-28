@@ -128,10 +128,7 @@ body{
     .share-buttons-icons{
         margin-top: 1.5rem;
     }
-    .top-share{
-    margin-top: 115px;
-    }
-
+   
 }
 #telegram-share-link,#twitter-share-link,#facebook-share-link{
     display: inline-block;
@@ -352,6 +349,11 @@ body{
         padding:3rem 1.5rem;
     }
 }
+@media screen and (max-width:400px){
+    .login-box{
+        width:80%;
+    }
+}
 
 #menu-links{
     display:flex;
@@ -449,7 +451,12 @@ body{
 .top-share{
     background-color: rgba(23, 23, 23, 0.418);
 }
+@media screen and (max-width:550px){
+      .top-share{
+    margin-top: 115px;
+    }
 
+}
 @media screen and (max-width:430px){
     .share-buttons-icons{
         width:100%;
@@ -507,7 +514,6 @@ body{
     padding:3.71px 5px;
 }
 .tick-eps{
-    border:px solid white;
     font-size: 12px;
     background-color: rgba(238, 238, 238, .2);
     font-weight: 600;
@@ -561,7 +567,7 @@ body{
 .anime-grid{
     margin-top:2rem;
     display: grid;
-    grid-template-columns:  repeat(auto-fit,minmax(155px,1fr));
+    grid-template-columns:  repeat(auto-fit,minmax(140px,1fr));
     gap:20px;
 }
 .anime-poster-container{
@@ -691,7 +697,6 @@ body{
 }
 
 .footer{
-    border:1px solid white;
     max-width: 1900px;
     margin: 0 auto;
     margin-top:3rem;
@@ -701,4 +706,8 @@ body{
 .copyright-message{
     margin-top:1rem;
     color: #CCCCCC;
+}
+button{
+    border:none;
+    outline: none;
 }

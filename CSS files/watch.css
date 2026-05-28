@@ -28,11 +28,12 @@
     }
 }
 .anime-video{
-    width:61%;
+      width:61%;
       height:clamp(300px, 40vw, 580px);
       display:flex;
       justify-content: center;
       align-items: end;
+      object-fit: cover;
 }
 iframe{
     border:none;
@@ -40,7 +41,6 @@ iframe{
 #animeVideo iframe{
     width: 100%;
     height: 100%;
-    object-fit:cover;
 }
 .loading{
     margin:auto;

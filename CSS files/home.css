@@ -225,7 +225,9 @@
         font-size:40px;
     }
     .anime-slider{
-        height:550px
+        height:550px;
+        border-radius: 0;
+
     }
 }
 @media screen and (max-width:1300px){
@@ -430,7 +432,8 @@
     }
     #trendyAnime{
         overflow-x: auto;
-        touch-action:cross-slide-x;
+        touch-action:pan-x;
+        -webkit-overflow-scrolling: touch;
     }
     
 }

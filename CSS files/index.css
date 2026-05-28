@@ -137,7 +137,6 @@ body{
 }
 .search-button{
     background-color: #ffbade;
-
     border-radius:14px;
     color:black;
     font-size: 3rem;
@@ -178,7 +177,6 @@ body{
    
 }
 #top-search-anime{
-    border:px solid white;
     font-size:14px;
     width:500px;
     line-height:25px;
@@ -193,16 +191,13 @@ body{
         left:0;
         z-index:1;
         margin-right:rem;
-        border:px solid white;
     }
     #position-img-container{
-        border:px  solid white;
         position:absolute;
         z-index:-50;
         height:100%; 
     }
     #ssanime-container{
-        border:px solid red;
         width: 800px;
     }
 } 
@@ -215,15 +210,14 @@ body{
         padding:4rem 4.5rem 4rem 4.5rem;
     }
     #search-anime{
-    max-width:540px;
-    border:none;
+        max-width:540px;
+        border:none;
     }
     #anime-link{
        margin-top:0;
     }
     #top-search-anime{
         width:100%;
-        border:px solid white;
     }
  }
  @media screen and (max-width:520px){
@@ -244,21 +238,22 @@ body{
     #top-search-anime{
         font-size:12px;
         line-height:20px;
-        border:px solid white;
     }
     #search-anime-container{
-        border:px solid white;
         max-width:100%;
     }
  }
  @media screen and (max-width:356px){
     #search-anime{
-        width:300px;
+        /* max-width:300px;
         min-width:30px;
-        border:px solid red;
+        border:px solid red; */
+        width:100%;
+        margin:0 auto;
     }
     #search-anime-container{
-        width:100%;
+        flex-direction: column;
+        width: fit-content;
     }
  }
  @media screen and (max-width:294px){
@@ -271,7 +266,6 @@ body{
     display:flex;
     align-items: center;
     gap:2rem;
-    border:px solid white;
     max-width:1200px;
     margin:0 auto;
     padding:0 1rem 0 1rem;
@@ -301,12 +295,11 @@ body{
     align-items: center;
  }
 
- #share-icon-container{
-    border:px solid white;
+ /* #share-icon-container{
     padding:0.4rem 1.2rem;
     border-radius: 16px;
     background-color:#95D03A;
- }
+ } */
  #share-icon{
     width:14px;
  }
@@ -322,12 +315,10 @@ body{
     max-width:1200px;
     padding:0 1rem 0 1rem;
     margin:2.5rem auto;
-    border:px solid white;
     gap:3rem;
 
 }
 #about-ssanime-container{
-    border:px solid white;
     width:100%;
     max-width:720px;
 }
@@ -353,7 +344,6 @@ ul{
 }
 #ssanime-post-container{
     min-width:400px; 
-    border:px solid white;
 }
 .post-container{
     background-color: rgba(255,255,255,.05);

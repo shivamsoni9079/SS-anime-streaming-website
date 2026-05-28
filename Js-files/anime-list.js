@@ -234,10 +234,37 @@ currentAnime.url.includes("?")
 const res = await fetch(apiUrl);
         const data=await res.json();
         totalPages=data.pagination.last_visible_page;
-        if(!data.data){
-            container.innerHTML="No anime found";
+
+
+        // if(!data.data){
+        //     container.innerHTML="No anime found";
+        //     return;
+        // }
+                if(
+            !data.data ||
+            data.data.length === 0
+        ){
+
+            container.innerHTML = `
+
+            <div class="not-found-container">
+
+                <h2>
+                    No Anime Found
+                </h2>
+
+                <p>
+                    Try searching with another anime name.
+                </p>
+
+            </div>
+
+            `;
+
             return;
+
         }
+
         let cards="";
       const uniqueAnime= data.data
 .filter(anime => {
