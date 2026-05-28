@@ -98,7 +98,7 @@ Simple login system using browser localStorage.
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/shivamsoni9079/SS-anime-streaming-website.git
 ```
 
 2. Open the project folder
