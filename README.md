@@ -1,4 +1,6 @@
 # SS-anime-streaming-website
+LIVE DEMO: https://ss-anime-streaming-website.vercel.app/
+
 SS!Anime is a responsive anime streaming and discovery website built using HTML, CSS, and JavaScript.  
 The project uses the Jikan API to fetch real-time anime data including trending anime, top airing shows, genres, popular series, and detailed watch pages.
 
