@@ -1,98 +1,68 @@
 
-const urlParams =
-new URLSearchParams(
-window.location.search
-);
+const urlParams = new URLSearchParams(window.location.search);
 
-const id =
-urlParams.get("id");
+const id = urlParams.get("id");
 
+// LOAD ANIME DETAILS
+async function loadAnimeDetails() {
 
-// LOAD ANIME
+    const animeContent = document.getElementById("animeContent");
 
-async function loadAnime(){
-
-    const animeContent =
-    document.getElementById(
-        "animeContent"
-    );
-   
-    try{
+    try {
 
         const res = await fetch(
-
-`https://api.jikan.moe/v4/anime/${id}/full`
-
+            `https://api.jikan.moe/v4/anime/${id}/full`
         );
 
-        if(!res.ok){
-
-            throw new Error(
-                "API Error"
-            );
-
+        if (!res.ok) {
+            throw new Error("API Error");
         }
 
-        const data =
-        await res.json();
+        const data = await res.json();
 
-        const anime =
-        data.data;
+        const anime = data.data;
+
+        document.title = anime.title_english || anime.title;
 
         // VIDEO
-        document.getElementById(
-            "animeVideo"
-        ).innerHTML =
+        document.getElementById("animeVideo").innerHTML =
 
-        anime.trailer?.embed_url
+            anime.trailer?.embed_url
 
-        ?
+                ?
 
-        `
+                `
+                <iframe
+                    src="${anime.trailer.embed_url}"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+                `
 
-        <iframe
-        src="${anime.trailer.embed_url}"
+                :
 
-        frameborder="0"
+                `
+                <p class="loading">
+                    Trailer Not Available
+                </p>
+                `;
 
-        allowfullscreen>
-
-        </iframe>
-
-        `
-
-        :
-
-        `
-
-        <p class="loading">
-
-            Trailer Not Available
-
-        </p>
-
-        `;
-
-        //anime content
+        // DETAILS
 
         animeContent.innerHTML = `
 
         <div class="watch-anime-poster-box">
 
             <img
-            src="${anime.images.jpg.large_image_url}"
+                src="${anime.images.jpg.large_image_url}"
+                alt="${anime.title}">
 
-            alt="${anime.title}">
-        
         </div>
-
 
         <div class="watch-anime-detail">
 
             <h2 class="watch-anime-title">
-
                 ${anime.title_english || anime.title}
-
             </h2>
 
             <div class="tick-fd">
@@ -102,14 +72,11 @@ async function loadAnime(){
                     <div class="tick-item tick-sub">
 
                         <img
-                        src="../images/icons8-so-closed-caption-24.png"
-
-                        class="tick-sub-img">
+                            src="../images/icons8-so-closed-caption-24.png"
+                            class="tick-sub-img">
 
                         <p class="sub-eps">
-
                             ${anime.episodes || "?"}
-
                         </p>
 
                     </div>
@@ -117,78 +84,62 @@ async function loadAnime(){
                     <div class="tick-item tick-dub">
 
                         <img
-                        src="../images/mic.png"
-
-                        class="tick-dub-img dub-mic">
+                            src="../images/mic.png"
+                            class="tick-dub-img dub-mic">
 
                         <p class="dub-eps">
-
                             ${anime.episodes || "?"}
-
                         </p>
 
                     </div>
 
                 </div>
 
-
                 <div class="fd-info">
 
                     <span class="dot"></span>
 
                     <span class="fdi-item">
-
                         ${anime.type || "TV"}
-
                     </span>
 
                     <span class="dot"></span>
 
                     <span class="fdi-duration">
-
                         ${anime.duration || "?"}
-
                     </span>
 
                 </div>
 
             </div>
-        
+
             <div class="watch-anime-desc-box">
 
                 <p>
-
                     ${anime.synopsis || "No Description"}
-
                 </p>
 
             </div>
-   
+
         </div>
 
         `;
 
-    }
-
-    catch(error){
+    } catch (error) {
 
         console.log(error);
 
-        document.getElementById(
-            "animeVideo"
-        ).innerHTML = `
-
-        <p class="loading">
-
-            Failed To Load Anime
-
-        </p>
-
+        document.getElementById("animeVideo").innerHTML = `
+            <p class="loading">
+                Failed To Load Anime
+            </p>
         `;
 
     }
 
 }
-setTimeout(()=>{
-loadAnime();
-},2000);
+
+// LOAD AFTER 2 SEC
+setTimeout(() => {
+    loadAnimeDetails();
+}, 2000);

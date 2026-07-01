@@ -1,3 +1,4 @@
+
                         let currentPage=1;
                         let totalPages=1;
                         //url
@@ -295,11 +296,38 @@ async function loadAnime(page,scroll=false){
     currentPage=page;
     await fetchAnime(page);
     createPagination();
-    if(scroll){
-        window.scrollTo({top:0,
-            behavior:"smooth"
+
+
+    // if(scroll){
+    //     window.scrollTo({top:0,
+    //         behavior:"smooth"
+    //     });
+    // }
+
+
+if (scroll) {
+
+    if (window.location.pathname.includes("watch.html")) {
+
+        const animeSection = document.querySelector(".anime-section");
+
+        animeSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
+
+    } else {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
     }
+
+}
+
+
 }
         function createPagination(){
             const pagination=document.getElementById("anime-page");
